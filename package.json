@@ -1,0 +1,23 @@
+{
+  "name": "car",
+  "version": "0.0.0",
+  "description": "site de location de voiture avec et sans chauffeur",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nadhub/car.git"
+  },
+  "author": "nad et morad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nadhub/car/issues"
+  },
+  "homepage": "https://github.com/nadhub/car",
+  "dependencies": {
+    "express": "~4.9.5",
+    "ejs": "~1.0.0"
+  }
+}
