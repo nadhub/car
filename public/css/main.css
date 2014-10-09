@@ -1,0 +1,15 @@
+.navbar-inverse {
+	background-color: blue;
+}
+
+.my-header {
+	background-color: rgb(201, 214, 212);
+	height: 300px;
+}
+.my-header2 {
+	background-color: rgb(201, 214, 212);
+	height: 500px;
+}
+.espace-top {
+	margin-top: 10px;
+}
