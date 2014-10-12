@@ -1,34 +1,32 @@
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Car A louer</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">A Propos</a></li>
-            <li><a href="#">Application</a></li>
-            <li><a href="#">Destinations</a></li>
-            <li><a href="#">Nous contacter</a></li>
-            <li class="pull-right"><a href="#">Réserver en ligne ou au 01.11.22.33.44</a></li>
-          </ul>
-        </div>
-     
-        <!-- <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+<header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-xs-12">
+                        <h1 class="brand-heading">Platinium Car</h1>
+                        <p class="intro-text">VIP CAR SERVICES</p>
+                        <a href="#" class="btn btn-circle" ng-click="mc.showPrix()">
+                            <i class="fa fa-angle-double-down animated" ></i>
+                        </a>
+                    </div>
+                    <div class="row" ng-show="mc.isEnabled">
+                        <div class="col-md-10 col-md-offset-1 col-xs-12 form-prix">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <input class="form-control space-right" placeholder="Départ" id="depart"/>
+                                    <input class="form-control space-right" placeholder="Destination" id="destination"/>
+                                    <select class="form-control space-right">
+                                        <option>Berline</option>
+                                        <option>Break</option>
+                                    </select>
+                                    <input type="number" class="form-control space-right" placeholder="Nombre de personne" id="personne"/>
+                                    <button class="btn btn-primary" ng-click="mc.calculDistance()">Prix </button>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
+        </div>
+    </header>

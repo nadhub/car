@@ -1,47 +1,34 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" ng-app="app">
 
-        <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/vendor/fontawesome/css/font-awesome.min.css">
-        <style>
-            body {
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-        </style>
-        <link rel="stylesheet" href="/vendor/bootstrap/dist/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/css/main.css">
-        
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <% include includes/header%>
+<% include includes/head %>
 
-    <div class="container">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="mainCtrl as mc">
+
+    <!-- Navigation -->
+    <% include includes/navbar %>
+
+    <!-- Intro Header -->
+    <% include includes/header %>
+
+    <!-- About Section -->
+    <% include includes/section-about %>
+
+    <!-- Download Section -->
+    <% include includes/section-download %>
+
+    <!-- Contact Section -->
     
-    <% include includes/partie1%>    
-    <% include includes/partie2%>  
+    <% include includes/section-contact %>
 
-      <hr>
+    <!-- Map Section -->
+    <div id="map"></div>
 
-      <footer>
-        <p>&copy; Company 2014</p>
-      </footer>
-    </div> <!-- /container -->        
-        <script src="/vendor/jquery/dist/jquery.min.js"></script>
-        <script src="/vendor/dist/js/bootstrap.min.js"></script>
-        <script src="/vendor/modernizr/modernizr.js"></script>
+    <!-- Footer -->
+    <% include includes/footer %>
 
-    </body>
+    <% include includes/scripts %>
+
+</body>
+
 </html>
