@@ -5,22 +5,23 @@
                     <div class="col-md-8 col-md-offset-2 col-xs-12">
                         <h1 class="brand-heading">Platinium Car</h1>
                         <p class="intro-text">VIP CAR SERVICES</p>
-                        <a href="#" class="btn btn-circle" ng-click="mc.showPrix()">
+                        <a href="#" class="btn btn-circle" ng-click="showPrix()">
                             <i class="fa fa-angle-double-down animated" ></i>
                         </a>
+                       {{ distanceData }}
                     </div>
-                    <div class="row" ng-show="mc.isEnabled">
+                    <div class="row" ng-show="isEnabled">
                         <div class="col-md-10 col-md-offset-1 col-xs-12 form-prix">
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <input class="form-control space-right" placeholder="Départ" id="depart"/>
-                                    <input class="form-control space-right" placeholder="Destination" id="destination"/>
+                                    <input class="form-control space-right" placeholder="Départ" id="depart" ng-model="dep"/>
+                                    <input class="form-control space-right" placeholder="Destination" id="destination" ng-model="dest"/>
                                     <select class="form-control space-right">
                                         <option>Berline</option>
                                         <option>Break</option>
                                     </select>
                                     <input type="number" class="form-control space-right" placeholder="Nombre de personne" id="personne"/>
-                                    <button class="btn btn-primary" ng-click="mc.calculDistance()">Prix </button>
+                                    <button class="btn btn-primary" ng-click="calculDistance()">Prix </button>
                                 </div>
                                 
                             </form>
