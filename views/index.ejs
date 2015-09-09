@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="fr" ng-app="app">
 
 <% include includes/head %>
 
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="mainCtrl">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="mainCtrl">
 
-        <!-- Navigation -->
-        <% include includes/navigation %>
+    <!-- Navigation -->
+    <% include includes/navbar %>
 
-        <!-- Intro Header -->
-        <% include includes/intro-header %>
+    <!-- Intro Header -->
+    <% include includes/header %>
+    <% include includes/recap-form %>
 
-        <!-- About Section -->
-        <% include includes/section-prix %>
+    <!-- Nous Section -->
+    <% include includes/section-nous %>
 
-        <!-- Download Section -->
-        <% include includes/section-download %>
+    <!-- reservation Section -->
+    <% include includes/section-reservation %>
 
-        <!-- Contact Section -->
+    <!-- construct Section -->
+    <% include includes/construction %>
 
-        <% include includes/section-contact %>
+    <!-- Footer -->
+    <% include includes/footer %>
 
-        <!-- Map Section -->
-        <div id="map"></div>
-
-        <!-- Footer -->
-        <% include includes/footer %>
-
-        <% include includes/scripts %>
-
-    </body>
+    <% include includes/mailer %>
+		<% include includes/conditions %>
+    <% include includes/scripts %>
+</body>
 
 </html>

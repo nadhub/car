@@ -1,0 +1,119 @@
+<div class="modal fade" id="reserver" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    
+    <div class="modal-dialog modal-lg">
+            <div class="modal-content text-left">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+                    <h4 class="modal-title" id="myModalLabel">Réservation...</h4>
+                </div>
+<!--+++++++++++++++++ Modal body  ++++++++++++++-->                
+                <div class="modal-body">
+                    <div  class="row">
+                    <div class="col-sm-10 col-sm-offset-2">    
+                        <div class="col-sm-4">
+                            <form class="form-horizontal" name="commentform" action="" role="form" novalidate>
+                                <div class="form-group" ng-class="{'has-error' : commentform.nom.$invalid && commentform.nom.$dirty}">
+                                    <label class="control-label" for="nom">Nom:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre nom complet" ng-model="mailer.nom" required/>
+                                    </div>
+                                    <div class="help-block has-error" ng-show="commentform.nom.$error.required" >
+                                       <span class="help-block has-error"> Le champs nom est obligatoire</span>
+                                    </div>
+
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label class="control-label" for="email">Email:</label>
+                                    <div class="input-group" ng-class="{'has-error' : commentform.email.$invalid && commentform.mail.$dirty}">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Email " ng-model="mailer.email" required/>
+                                        <span class="input-group-addon">@</span>
+                                    </div>
+                                    <div class="help-block has-error" ng-show="commentform.email.$error.required" >
+                                        <span class="help-block has-error"> Le champs email est obligatoire</span>
+                                    </div>
+                                    <div class="help-block has-error" ng-show="commentform.email.$error.email" >
+                                        <span class="help-block has-error"> Email n'est pas valide</span>
+                                    </div>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error' : commentform.tel.$invalid && commentform.tel.$dirty}">
+                                    <label class="control-label" for="tel">Tél.:</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" id="tel" name="tel"  ng-model="mailer.tel"
+                                               ui-mask="99-99-99-99-99"   required/>
+                                    </div>
+
+                                    <div class="help-block has-error" ng-show="commentform.tel.$error.required" >
+                                        <span class="help-block has-error"> Le champs Tel est obligatoire</span>
+                                    </div>
+
+                                </div>
+                                <!--   Date picker  -->
+                                <div class="form-group">
+                                     <div class="dropdown">
+                                        <label class="control-label" for="date">Date:</label>
+                                            <div class="input-group">
+                                                <input class="form-control"
+                                                       id="date"
+                                                       name="date"
+                                                       type="text"
+                                                       datepicker-options="dateOptions"
+                                                       datepicker-popup="dd-MM-yyyy "
+                                                       current-text="Aujourd'hui"
+                                                       clear-text="effacer"
+                                                       close-text="fermer"
+                                                       is-open="opened"
+                                                       ng-model="mailer.date"/>
+                                                <span class="input-group-addon" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></span>
+                                            </div>
+                                        </a>
+
+                                    </div>   
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-xs-6">
+                                            <select name="hour" id="hour" ng-model="mailer.hour" ng-options="item  for item in hours" style="color:#000000;width: 100%;height: 38px;">
+                                                <option value="">Heure:</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-xs-6">
+                                            <select name="minute" id="minute" ng-model="mailer.minute" ng-options="item for item in minutes" style="color:#000000;width: 100%;height: 38px;">
+
+                                                <option value="">Minutes:</option>
+                                            </select>
+                                    </div>
+                                </div>
+
+                                <!--   End date picker  -->
+                                
+                                
+                            </form>
+                <!--++++++++++++ End row 1 ++++++++++++++-->                    
+                        </div>
+                        <div class="col-sm-6 col-sm-offset-1">
+                            <blockquote class="bquote">
+                                    <h6>Ville de départ: {{name0rigine}}</h6>
+                                    <h6>Destination: {{nameDestination}}</h6>
+                                    <h6>Kilomètres: {{nbKms}}</h6>
+                                    <h6>Temps estimé: {{duration}}</h6>
+                                    <h6>Date: {{ mailer.date | date:'dd-MM-yyyy' }}</h6>
+                                    <h6>Heure: {{mailer.hour}} : {{mailer.minute}}</h6>
+                            </blockquote>
+                        </div>
+                        </div>
+                    </div>
+                        
+                <!-- end modal body -->
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-left">
+                        <i class="fa fa-info-circle"></i> <i>Un courriel de confirmation vous sera envoyé</i>
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clearMyData()">Modifier</button>
+                    <button type="submit" class="btn btn-default" ng-click="sendMail()" >Envoyer</button>
+                </div>
+
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,52 @@
+
+    <section id="reservation" class="content-section text-center">
+        <div class="reservation-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div  class="wow fadeInUp">
+                            <p>R&Eacute;SERVATION EN LIGNE 24H/24 – R&Eacute;SERVATION T&Eacute;L&Eacute;PHONE AU <span class="tel">01 69 46 09 94 </span>de 8h à 20h</p>
+                            <p>Nos prix sont fixes, aucun supplément ne vous sera demandé que vous soyez bloqués dans les bouchons ou que vous ayez plusieurs bagages.</p>
+                            <p>En quelques clics vous réservez votre voiture, avec un large choix de véhicules :</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-12 col-lg-12">
+                            <form class="form-inline wow fadeInDownBig" role="form" name="formPrice" data-wow-duration="1s" novalidate>
+
+
+
+                                <div class="form-group" ng-class="{'has-error': formPrice.depart.$invalid && formPrice.depart.$dirty}">
+                                    <input class="form-control input-lg" name="depart" placeholder="Départ" id="depart" ng-model="city.depart" required ng-minlength="3"/>
+
+                                </div>
+                                <div class="form-group" ng-class="{'has-error': formPrice.destination.$invalid && formPrice.destination.$dirty}">
+                                    <input class="form-control input-lg" name="destination" placeholder="Destination" id="destination" ng-model="city.destination" required/>
+                                </div>
+                                <div class="form-group" ng-class="{'has-error': formPrice.pricePerKm.$invalid && formPrice.pricePerKm.$dirty}">
+                                    <select class="form-control input-lg car-type" name="pricePerKm" ng-options="item.pricePerKm as item.name for item in voiture" ng-model="city.pricePerKm" required>
+                                        <option value = "">Choisir le type de véhicule </option>
+
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-lg prix" ng-disabled="formsPrice.$invalid"  ng-click="getDistance()">Prix </button>
+                                </div>
+                                <div class="row help-block has-error">
+                                    <div class="form-group">
+                                        <div class="help-block has-error" ng-show="formPrice.depart.$error.required"> Merci d'indiquer votre lieu de départ </div>
+                                        <div class="help-block has-error" ng-show="formPrice.destination.$error.required"> Merci d'indiquer votre destination </div>
+                                        <div class="help-block has-error" ng-show="formPrice.pricePerKm.$error.required"> Merci d'indiquer le type de vehicule </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- end -->
+
+    </section>

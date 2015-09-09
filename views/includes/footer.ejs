@@ -1,5 +1,59 @@
+<section id="contact_form" class="content-section">
+	    
+	<div class="container">
+					<!-- Modal -->
+                    <!-- Button trigger modal -->
+                    <div class="modal fade" id="myContact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <form class="form-horizontal" role="form">
+                        	<div class="modal-dialog modal-lg">
+		                        <div class="modal-content text-left">
+			                        <div class="modal-header">
+			                        	<!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+			                        	<h4 class="modal-title" id="myModalLabel">Contactez nous</h4>
+			                        </div>
+			                        
+			                        <!-- modal body -->
+
+			                        <div class="modal-body  contact">
+				                        <div class="row">
+					                        <div class="col-sm-6">
+						                        <div class="form-group form-group-lg">
+													<label class="control-label" for="email">Email:</label>
+													<input type="email" class="form-control" id="email" name="email" data-toggle="tooltip" title="Veuillez entrer votre email" data-placement="top" ng-model="contact.email"/>
+												</div>
+												<div class="form-group form-group-lg">
+													<label class="control-label" for="message">Message:</label>
+													<textarea class="form-control" id="textarea" name="message" data-toggle="tooltip" title="Veuillez nous laisser un message" data-placement="bottom" ng-model="contact.message"></textarea>
+												</div>
+											</div>
+											<div class="col-sm-6">
+													<!--<img src="img/contact_modal.jpg" class="img-responsive contact_modal" />-->
+											</div>
+										</div>
+									</div>
+					                
+									<!-- end modal body -->
+
+					                <div class="modal-footer">
+					                	<address class="pull-left text-left">
+				                          <strong>PLATINIUM CAB</strong><br>
+				                          3 rue Marie Curie<br>
+				                          91700 Villiers-sur-Orge<br>
+				                          <i class="fa fa-phone-square"></i>  01 69 46 09 94
+                    					</address>
+                    					<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="contactClear()">Annuler</button>
+						                <button type="submit" class="btn btn-default" ng-click="contactSendmail()">Envoyer</button>
+									</div>
+		                        </div>
+		                    </div>
+		                </form>
+                    </div>
+                    	 
+                     <!-- end Modal -->
+	</div>
+</section>
 <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; www.platinium-car.com  2014</p>
-        </div>
+	<div class="container text-center">
+	        <p>Copyright &copy; Platinium Cab 2014</p>
+	</div>
 </footer>
