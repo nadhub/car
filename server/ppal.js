@@ -1,7 +1,7 @@
 'use strict';
 
 var paypal = require('paypal-rest-sdk');
-var config = require('./config/paypal-conf');
+var config = require('./config/ppal-conf');
 
 
 paypal.configure(config);
